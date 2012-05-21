@@ -1,0 +1,19 @@
+/* TEAM */
+  Frontend:   edubkendo
+  GitHub:     User
+  Twitter:    -
+  Location:   -
+  
+  Backend:    edubkendo
+  GitHub:     User
+  Twitter:    -
+  Location:   -
+  
+  Mobile:     edubkendo
+  GitHub:     User
+  Twitter:    -
+  Location:   -
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Tower, jQuery, Underscore.js
