@@ -21,6 +21,8 @@ npm install .
 
 tower server -e development
 
+### To Get App on Heroku
+
 removed the following lines from the .gitignore file:
 
 public/assets/*.css
@@ -30,6 +32,22 @@ public/assets/*.js
 public/javascripts/
 
 public/stylesheets/
+
+First, copy ./node_modules/tower/test/example/public/javascripts/vendor/javascripts/chai.js to
+'public/javascripts/vendor/javascripts/chai.js' . **If there is already a copy of chai.js there, this may have already been fixed.
+
+cake assets:bundle
+
+install Heroku Toolbelt(https://toolbelt.herokuapp.com) 
+On Ubuntu Linux that command is:
+
+```
+wget -qO- https://toolbelt.heroku.com/install.sh | sh
+```
+
+Verify app will run with: foreman start
+
+Check http://localhost:5000/
 
 ## Chapter 2
 
