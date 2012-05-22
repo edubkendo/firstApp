@@ -1,37 +1,48 @@
-# FirstApp
+# (Tower) on Rails Tutorial: first application
 
-## Install
+This is the first application for 
+[*Ruby on Rails Tutorial: Learn Rails by Example*](http://railstutorial.org/)
+by [Michael Hartl](http://michaelhartl.com/). 
 
-First [setup the Tower.js development environment](http://towerjs.org/guides/development#environment), then run:
+However, instead of using Ruby on Rails, I am following along but using Coffeescript, Node,
+and particularly, the [*Tower.js*](http://towerjs.org/) framework, which was modeled quite closely on rails. It is my plan to not only learn Tower by doing so, but also to document the differences for those following in my footsteps. So far:
 
-```
-git clone git@github.com:User/firstApp.git
+Chapter 1
+
+npm install -g tower
+
+tower new firstApp
+(follow js/node convention of using camelCase filenames)
+
 cd firstApp
-npm install
-node server
-```
 
-## Test
+npm install .
+(instead of running Bundle Install)
 
-Run tests:
+tower server -e development
 
-```
-npm test
-```
+removed the following lines from the .gitignore file:
+public/assets/*.css
+public/assets/*.js
+public/javascripts/
+public/stylesheets/
 
-Read up on [testing Tower.js apps](http://towerjs.org/guides/testing).
+Chapter 2
 
-## Deploy
+tower new demoApp
+(follow js/node convention of using camelCase filenames)
 
-Read [How to deploy Tower Apps to Heroku](http://towerjs.org/guides/deployment#heroku).
+cd demoApp
 
-## Documentation
+npm install .
+(follow js/node convention of using camelCase filenames)
 
-- [Tower.js](http://towerjs.org/guides)
-- [MongoDB](http://www.mongodb.org/display/DOCS/Advanced+Queries)
-- [Node.js](http://nodejs.org/docs/v0.6.11/api/fs.html)
-- [Mocha](https://github.com/visionmedia/mocha)
-- [CoffeeScript](http://coffeescript.org/)
-- [Stylus](http://learnboost.github.com/stylus/)
+tower generate scaffold User name: string email: string hasMany:posts
+(notice we specify the relationship within the scaffolding command)
 
-If all else fails, see the [Rails Guides](http://guides.rubyonrails.org/), should be fairly close.
+cake db:seed
+
+tower server -e development
+(starts server, app is viewable at http://localhost:3000/)
+*Note that while most of the url's match up with those in Hartl's tutorial, users/1 and users/index produce an error. The unique id's for the users do not begin with '1', but rather with a very large seemingly random number. In this particular case, the first user is at: http://localhost:3000/users/4f98efc613959d942f000001 .
+Later we need to look into why this is so. Is this number predictable so that we can use it programatically?
