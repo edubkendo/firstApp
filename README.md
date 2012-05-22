@@ -82,15 +82,15 @@ heroku ps:scale web=1
 heroku addons:add mongohq:free
 ```
 
-*To use heroku addons like mongohq:free, you are required to "verify" your account by providing a credit* 
+* To use heroku addons like mongohq:free, you are required to "verify" your account by providing a credit * 
 
-*card number.  I used an old Visa Gift Card I had, which may or may not have had a dollar or two left on it *
+* card number.  I used an old Visa Gift Card I had, which may or may not have had a dollar or two left on it *
 
-*(literally, there would have been less than three dollars.) They claim they do not charge the card at all- *
+* (literally, there would have been less than three dollars.) They claim they do not charge the card at all- *
 
-*unless you add paid services. I believe this is likely true, because I doubt this card would have *
+* unless you add paid services. I believe this is likely true, because I doubt this card would have *
 
-*worked otherwise.*
+* worked otherwise. *
 
 ### To finish setting up on heroku:
 
