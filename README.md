@@ -7,7 +7,7 @@ by [Michael Hartl](http://michaelhartl.com/).
 However, instead of using Ruby on Rails, I am following along but using Coffeescript, Node,
 and particularly, the [*Tower.js*](http://towerjs.org/) framework, which was modeled quite closely on rails. It is my plan to not only learn Tower by doing so, but also to document the differences for those following in my footsteps. So far:
 
-Chapter 1
+## Chapter 1
 
 npm install -g tower
 
@@ -22,12 +22,16 @@ npm install .
 tower server -e development
 
 removed the following lines from the .gitignore file:
+
 public/assets/*.css
+
 public/assets/*.js
+
 public/javascripts/
+
 public/stylesheets/
 
-Chapter 2
+## Chapter 2
 
 tower new demoApp
 (follow js/node convention of using camelCase filenames)
