@@ -82,33 +82,35 @@ heroku ps:scale web=1
 heroku addons:add mongohq:free
 ```
 
-*To use heroku addons like mongohq:free, you are required to "verify" your account by providing a credit card
+*To use heroku addons like mongohq:free, you are required to "verify" your account by providing a credit* 
 
-number.  I used an old Visa Gift Card I had, which may or may not have had a dollar or two left on it 
+*card number.  I used an old Visa Gift Card I had, which may or may not have had a dollar or two left on it *
 
-(literally, there would have been less than three dollars.) They claim they do not charge the card at all-- 
+*(literally, there would have been less than three dollars.) They claim they do not charge the card at all- *
 
-unless you add paid services. I believe this is likely true, because I doubt this card would have 
+*unless you add paid services. I believe this is likely true, because I doubt this card would have *
 
-worked otherwise.*
+*worked otherwise.*
 
 ### To finish setting up on heroku:
 
-Login to heroku website, go to myApps, pick app, click on "Add ons", click on MongoHQ.
+Login to heroku website, go to myApps, pick app, click on "Add ons", click on MongoHQ. On MongoHQ 
 
-On MongoHQ website, click Database Users tab. Click "Add a user". Add username and password. 
+website, click Database Users tab. Click "Add a user". Add username and password. Go to "Database 
 
-Go to "Database Info" tab.  Now, in /config/databases.coffee set it as follows:
+Info" tab.  Now, in /config/databases.coffee set it as follows: Under production, name is set to 
 
-Under production, name is set to Database from the MongoHQ site. If your Mongo URI is:
+Database from the MongoHQ site. If your Mongo URI is:
 
 mongodb://<user>:<password>@vinegar.mongohq.com:12123/app1231231
 
-Then "name" would be "app1231231", port would be 12123, host: vinegar.mongohq.com,
+Then "name" would be "app1231231", port would be 12123, host: vinegar.mongohq.com, and the username 
 
-and the username and password strings would be for the database user you just set up on the mongohq website,
+and password strings would be for the database user you just set up on the mongohq website,
 
 *NOT your heroku username and password.*
+
+Example:
 
 ```
 module.exports =
@@ -148,7 +150,9 @@ heroku ps
 
 If it's running, go check out your site!
 
-*If at any point the push to heroku hangs or fails because of the forever
+Mine is at http://empty-fog-4813.herokuapp.com though it doesn't do anything.
 
-module, just ctrl-c after waiting a reasonable amount of time and try again. It may take a few tries.*
+*If at any point the push to heroku hangs or fails because of the forever*
+
+*module, just ctrl-c after waiting a reasonable amount of time and try again. It may take a few tries.*
 
