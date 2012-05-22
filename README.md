@@ -34,8 +34,11 @@ public/javascripts/
 public/stylesheets/
 
 First, copy 
+
 ./node_modules/tower/test/example/public/javascripts/vendor/javascripts/chai.js 
+
 to 'public/javascripts/vendor/javascripts/chai.js' . 
+
 **If there is already a copy of chai.js there, this may have already been fixed.
 
 cake assets:bundle

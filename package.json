@@ -41,6 +41,7 @@
     "coffee-resque":          ">= 0.1.4",
     "coffee-script":          ">= 1.1.3",
     "mint":                   ">= 0.3.0",
+    "forever":                ">= 0.8.5",
     "tower":                  ">= 0.3.0"
   },
   "devDependencies": {
@@ -57,7 +58,6 @@
     "design.io-stylesheets":  ">= 0.3.0",
     "knox":                   ">= 0.0.9",
     "gzip":                   ">= 0.1.0",
-    "forever":                ">= 0.8.5",
     "cli-table":              ">= 0.0.1"
   },
   "scripts": {
