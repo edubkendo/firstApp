@@ -35,3 +35,4 @@ combine/
 node_modules
 npm-debug.log
 tmp/
+config/databases.coffee
